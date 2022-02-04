@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="board" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.statgui.controller.calculator">
+         <children>
+            <SplitPane fx:id="splitPane" dividerPositions="0.8109597924773021" orientation="VERTICAL">
+              <items>
+                <AnchorPane fx:id="topAnchor">
+                     <children>
+                        <BarChart fx:id="chart" layoutX="156.0" layoutY="17.0" title="Statistics" AnchorPane.bottomAnchor="1.3999999999999773" AnchorPane.leftAnchor="156.0" AnchorPane.rightAnchor="198.39999999999998" AnchorPane.topAnchor="17.0">
+                          <xAxis>
+                            <CategoryAxis fx:id="catAxisCategory" label="category" side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="numAxisValue" label="value" side="LEFT" />
+                          </yAxis>
+                     <padding>
+                        <Insets right="100.0" />
+                     </padding>
+                        </BarChart>
+                     </children>
+                </AnchorPane>
+                <AnchorPane fx:id="bottomAnchor">
+                     <children>
+                        <Button fx:id="addPoint" layoutX="331.0" layoutY="62.0" mnemonicParsing="false" onAction="#addAction" text="Add " />
+                        <TextField fx:id="dataInputField" layoutX="165.0" layoutY="62.0" />
+                        <Label fx:id="dataPointLabel" layoutX="45.0" layoutY="66.0" prefHeight="18.0" prefWidth="91.0" text="data point" />
+                        <Label fx:id="param" layoutX="45.0" layoutY="138.0" prefHeight="18.0" prefWidth="91.0" text="parameter" />
+                        <Label fx:id="paramValue" layoutX="165.0" layoutY="138.0" prefHeight="18.0" prefWidth="150.0" text="value" />
+                        <ChoiceBox fx:id="statePicker" accessibleRole="CHECK_MENU_ITEM" layoutX="625.0" layoutY="62.0" prefHeight="26.0" prefWidth="228.0" />
+                        <Label fx:id="nameLabel" layoutX="45.0" layoutY="36.0" prefHeight="18.0" prefWidth="55.0" text="name" />
+                        <TextField fx:id="dataName" layoutX="166.0" layoutY="33.0" />
+                        <Label fx:id="pickerLabel" layoutX="535.0" layoutY="67.0" prefHeight="18.0" prefWidth="79.0" text="parameter" />
+                     </children>
+                </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </Pane>
