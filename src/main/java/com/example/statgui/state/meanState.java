@@ -7,10 +7,18 @@ public class meanState extends State {
     
 }
 @Override
-    public void calculate() {
-        public meanState(calculator handle) {
-            super(handle);
+public void calculate() {
 
-        
-    }
+    int counter = 0;
+    float sum = 0;
+    float mean = 0;
+        for (XYChart.Data<String, Number> data : handle.getDataSet().getData()) {
+            sum += data.getYValue().floatValue();
+            counter++;
+        }
+    if(counter >0)
+        mean = sum/counter;
+
+    handle.paramValue.setText(String.valueOf(mean));
+}
 }
