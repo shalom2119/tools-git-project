@@ -6,7 +6,6 @@ import javafx.scene.chart.XYChart;
 public class meanState extends State {
     public meanState(calculator handle) {
         super(handle);
-
 }
 @Override
     public void calculate() {
@@ -18,3 +17,9 @@ public class meanState extends State {
                 sum += data.getYValue().floatValue();
                 counter++;
             }
+            if(counter >0)
+            mean = sum/counter;
+
+        handle.paramValue.setText(String.valueOf(mean));
+    }
+}
