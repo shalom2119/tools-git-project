@@ -31,7 +31,7 @@ public class modeState extends State {
                             list.set(j, null);
                         }
                     }
-                    frequencyList[i] = counter;
+                    frequencyList[i] = 5;
                 }
             }
 
