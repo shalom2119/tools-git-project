@@ -36,6 +36,19 @@ public class modeState extends State {
             }
 
             mode = frequencyList[0];
+            for (int i = 1; i < frequencyList.length; i++) {
+                if (frequencyList[i] >= mode) {
+                    mode = frequencyList[i];
+                }
+            }
+
+            for (int i = 0; i < frequencyList.length; i++) {
+                if (frequencyList[i] == mode) {
+                    modelist.append(list.get(i).toString()).append(", ");
+                }
+            }
+
+            handle.paramValue.setText(String.valueOf(modelist));
         
         }
     }
