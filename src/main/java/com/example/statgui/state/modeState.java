@@ -12,6 +12,13 @@ public class modeState extends State {
     @Override
     public void calculate() {
 
+        ArrayList<Float> list = handle.getDataArray();
+
+        int frequencyList[] = new int[list.size()];
+        int counter = 0;
+        int mode = 0;
+        StringBuilder modelist = new StringBuilder();
+
         
         }
     }
