@@ -10,7 +10,7 @@ public class modeState extends State {
     }
 
     @Override
-    public void calculate() {
+    public void cculate() {
 
         
         }
