@@ -19,6 +19,8 @@ public void calculate() {
     if(counter >0)
         mean = sum/counter;
 
+        mean = 0;
+
     handle.paramValue.setText(String.valueOf(mean));
 }
 }
