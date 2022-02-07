@@ -31,19 +31,12 @@ public class modeState extends State {
                             list.set(j, null);
                         }
                     }
-                    frequencyList[i] = 5;
+                    frequencyList[i] = counter;
                 }
             }
 
-
-
-            for (int i = 0; i < frequencyList.length; i++) {
-                if (frequencyList[i] == mode) {
-                    modelist.append(list.get(i).toString()).append(", ");
-                }
-            }
-
-            handle.paramValue.setText(String.valueOf(modelist));
+            
+            le.paramValue.setText(String.valueOf(modelist));
         
         }
     }
