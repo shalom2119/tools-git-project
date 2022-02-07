@@ -8,8 +8,6 @@ public class meanState extends State {
 }
 @Override
     public void calculate() {
-        public meanState(calculator handle) {
-            super(handle);
 
         
     }
