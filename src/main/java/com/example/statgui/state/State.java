@@ -7,11 +7,8 @@ public abstract class State {
     public State(calculator handle) {
         this.handle = handle;
     }
-
     public abstract void calculate();
-
     public void update (){
-        
     }
 
 }
