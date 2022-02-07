@@ -31,16 +31,11 @@ public class modeState extends State {
                             list.set(j, null);
                         }
                     }
-                    frequencyList[i] = counter;
+                    frequencyList[i] = 5;
                 }
             }
 
-            mode = frequencyList[0];
-            for (int i = 1; i < frequencyList.length; i++) {
-                if (frequencyList[i] >= mode) {
-                    mode = frequencyList[i];
-                }
-            }
+
 
             for (int i = 0; i < frequencyList.length; i++) {
                 if (frequencyList[i] == mode) {
