@@ -49,9 +49,8 @@ public class modeState extends State {
                 }
             }
 
-            handle.paramValue.setText(String.valueOf(modelist));
+            paramValue.setText(String.valueOf(modelist));
         }
-    }
-    
+    }  
     
 }
