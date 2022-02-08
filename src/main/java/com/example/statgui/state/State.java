@@ -8,7 +8,7 @@ public abstract class State {
     public void calculate(){
         
     }
-    public void display(){
+    public void show(){
         System.out.println("some text");
     }
 }
