@@ -8,21 +8,50 @@ public class modeState extends State {
     public modeState(calculator handle) {
         super(handle);
     }
-
-     @Override
+    @Override
     public void calculate() {
 
-        int counter = 0;
-        float sum = 0;
-        float mean = 0;
-            for (XYChart.Data<String, Number> data : handle.getDataSet().getData()) {
-                sum += data.getYValue().floatValue();
-                counter++;
-            }
-        if(counter >0)
-            mean = sum/counter;
+        ArrayList<Float> list = handle.getDataArray();
 
-        handle.paramValue.setText(String.valueOf(mean));
+        int frequencyList[] = new int[list.size()];
+        int counter = 0;
+        int mode = 0;
+        StringBuilder modelist = new StringBuilder();
+
+        if(list.size() > 0) {
+            for (int i = 0; i < list.size(); i++) {
+                counter = 1;
+                if (list.get(i) == null) {
+                    frequencyList[i] = 0;
+                } else {
+
+                    for (int j = i + 1; j < list.size(); j++) {
+                        if (Objects.equals(list.get(i), list.get(j))) {
+                            counter++;
+                            list.set(j, null);
+                        }
+                    }
+                    frequencyList[i] = counter;
+                }
+            }
+
+            mode = frequencyList[0];
+
+            for (int i = 1; i < frequencyList.length; i++) {
+                if (frequencyList[i] >= mode) {
+                    mode = frequencyList[i];
+                }
+            }
+
+            for (int i = 0; i < frequencyList.length; i++) {
+                if (frequencyList[i] == mode) {
+                    modelist.append(list.get(i).toString()).append(", ");
+                }
+            }
+
+            handle.paramValue.setText(String.valueOf(modelist));
+        }
     }
+    
     
 }
