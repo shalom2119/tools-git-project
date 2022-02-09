@@ -27,9 +27,7 @@ public class meanState extends State {
         handle.paramValue.setText(String.valueOf(mean));
 
     }
-    public meanState(calculator handle) {
-        super(handle);
-    }
+    
     
 }
 
