@@ -9,6 +9,12 @@ public class meanState extends State {
     public meanState(calculator handle) {
         super(handle);
     }
+
+    @Override
+    public void calculate(){
+
+        
+    }
     
 }
 
