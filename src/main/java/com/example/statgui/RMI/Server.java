@@ -12,7 +12,7 @@ public class Server {
             System.out.println("server running");
         }
         catch(Exception ex){
-            System.out.println(ex);
+            
         }
     }
 
