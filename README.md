@@ -30,7 +30,7 @@ modeState calculates mode of dataset
 
 sami yesuf      0923/11
 samson leul     0928/11
-yohannes fenta  
+yohannes fenta  1139/11
 shalom million  0959/11
 
 
